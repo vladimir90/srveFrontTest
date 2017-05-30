@@ -9,28 +9,28 @@
             <div class="field">
               <label class="label">Firstname:</label>
               <p class="control">
-                <input class="input" type="text" placeholder="Text input">
+                <input class="input" type="text" placeholder="Your firstname">
               </p>
             </div>
 
             <div class="field">
               <label class="label">Lastname:</label>
               <p class="control">
-                <input class="input" type="text" placeholder="Text input">
+                <input class="input" type="text" placeholder="Your lastname">
               </p>
             </div>
 
             <div class="field">
               <label class="label">Password:</label>
               <p class="control">
-                <input class="input" type="text" placeholder="Text input">
+                <input class="input" type="password" placeholder="Enter password">
               </p>
             </div>
 
             <div class="field">
               <label class="label">Confirm Password:</label>
               <p class="control">
-                <input class="input" type="text" placeholder="Text input">
+                <input class="input" type="password" placeholder="Confirm password">
               </p>
             </div>
 

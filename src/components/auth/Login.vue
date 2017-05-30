@@ -8,14 +8,14 @@
           <div class="field">
             <label class="label">Email:</label>
             <p class="control">
-              <input class="input" type="text" placeholder="Text input">
+              <input class="input" type="text" placeholder="Enter email">
             </p>
           </div>
 
           <div class="field">
             <label class="label">Password:</label>
             <p class="control">
-              <input class="input" type="text" placeholder="Text input">
+              <input class="input" type="password" placeholder="Enter password">
             </p>
           </div>
 
