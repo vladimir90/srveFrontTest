@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import VeeValidate from 'vee-validate';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 
 Vue.use(VeeValidate);
@@ -15,4 +15,4 @@ new Vue({
   router,
   template: '<App/>',
   components: { App }
-})
+});

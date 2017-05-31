@@ -9,6 +9,7 @@
 <script>
 
   require('../node_modules/bulma/css/bulma.css');
+  require('../src/assets/css/app.css');
 
   import headerView from './components/common/Header.vue';
   import footerView from './components/common/Footer.vue';
