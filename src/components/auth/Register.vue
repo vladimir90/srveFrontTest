@@ -92,6 +92,7 @@
         }
       },
 
+
       methods:{
         sanitization(){
 
@@ -143,7 +144,7 @@
           }
 
           if(this.userData.password.length < 6){
-            this.errorMsg.password = "Your password must have at least 6 chars";
+            this.errorMsg.password = "Your password must have at least 6 characters";
             return false;
           }
 
@@ -151,11 +152,11 @@
           return true;
 
         },
+
         registerSubmit(){
-            this.sanitization();
-            //validation
-            //ajaxCall
-            //savingToken -> redirectToHome
+            if(this.sanitization()){
+
+            }
 
         }
       }
