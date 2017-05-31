@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eaf80300-8837-4f54-af9b-3ffecd15114c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/store/actions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/store/getters.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/store/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/store/modules/users.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/store/mutations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auth/Login.vue" afterPath="$PROJECT_DIR$/src/components/auth/Login.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/auth/Register.vue" afterPath="$PROJECT_DIR$/src/components/auth/Register.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/Dashboard.vue" afterPath="$PROJECT_DIR$/src/components/common/Dashboard.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/Footer.vue" afterPath="$PROJECT_DIR$/src/components/common/Footer.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/private/Home.vue" afterPath="$PROJECT_DIR$/src/components/private/Home.vue" />
-    </list>
+    <list default="true" id="eaf80300-8837-4f54-af9b-3ffecd15114c" name="Default" comment="" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,12 +354,12 @@
       <updated>1496132092124</updated>
       <workItem from="1496132094392" duration="11473000" />
       <workItem from="1496149919411" duration="1098000" />
-      <workItem from="1496151238273" duration="13923000" />
+      <workItem from="1496151238273" duration="14416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26494000" />
+    <option name="totallyTimeSpent" value="26987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
