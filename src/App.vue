@@ -1,7 +1,7 @@
 <template>
   <div>
     <headerView></headerView>
-      <router-view></router-view>
+       <router-view></router-view>
     <footerView></footerView>
   </div>
 </template>
@@ -24,6 +24,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

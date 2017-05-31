@@ -1,14 +1,13 @@
 <template>
   <section class="footer">
     <hr>
-  <div class="hero-body">
+    <footer class="footer">
     <div class="container has-text-right">
-
-      <p>
-        Copyright &copy
-      </p>
+      <div class="content has-text-centered">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
     </div>
-  </div>
+    </footer>
   </section>
 
 </template>
