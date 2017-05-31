@@ -1,7 +1,7 @@
 <template>
   <section class="footer">
     <hr>
-    <footer class="footer">
+    <footer>
     <div class="container has-text-right">
       <div class="content has-text-centered">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
