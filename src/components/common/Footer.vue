@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="footer">
     <hr>
   <div class="hero-body">
     <div class="container has-text-right">
