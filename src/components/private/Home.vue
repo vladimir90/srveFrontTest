@@ -15,13 +15,14 @@
 
 <script>
   import navView from '../common/Nav.vue';
-  import dashboardView from '../common/Dashboard.vue';
+
 
   export default {
     components:{
-      navView,
-      dashboardView
-    }
+      navView
+    },
+    template:'<navView>'
+
   }
 </script>
 

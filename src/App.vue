@@ -7,6 +7,7 @@
 </template>
 
 <script>
+
   require('../node_modules/bulma/css/bulma.css');
   require('../src/assets/css/app.css');
 

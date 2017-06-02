@@ -45,12 +45,9 @@
             <div class="field">
               <label class="label">Confirm Password:</label>
               <p class="control">
-                <input class="input" type="password" placeholder="Confirm password">
+                <input class="input" type="password" placeholder="Confirm password" v-model="userData.passwordConf">
               </p>
             </div>
-
-
-
 
             <div class="field is-grouped">
 
@@ -67,6 +64,10 @@
   </template>
 
   <script>
+    import router from '../../router/index.js';
+    import axios from 'axios';
+
+
     export default {
       data(){
         return{
@@ -75,7 +76,8 @@
             firstname:'',
             lastname:'',
             email:'',
-            password:''
+            password:'',
+            passwordConf:''
           },
           errorMsg:{
             firstname:'',
@@ -92,7 +94,41 @@
         }
       },
 
+
       methods:{
+        passwordConfirm(){
+          if(this.userData.password !== this.userData.passwordConf){
+              this.errorMsg.password = "Confirm your password";
+              this.userData.passwordConf = '';
+              return false;
+          }
+          return true;
+        },
+        ajaxCall(url){
+          this.config = {
+            headers: {
+              //            'Authorization': auth.getHeader('id_token'),
+              'Access-Control-Allow-Origin':'*',
+              'Accept': 'application/json'
+            }
+
+          }
+          var _this = this;
+
+          axios.get(url,this.config)
+            .then(function (response) {
+              _this.$store.dispatch('updateJsonData',response.data);
+
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        },
+        registerSuccess(){
+          this.ajaxCall('https://jsonplaceholder.typicode.com/posts');
+          router.push({ path: 'home' });
+          this.$store.dispatch('updateUserData',this.userData);
+        },
         sanitization(){
 
           for (const key of Object.keys(this.errorMsg)) {
@@ -143,7 +179,7 @@
           }
 
           if(this.userData.password.length < 6){
-            this.errorMsg.password = "Your password must have at least 6 chars";
+            this.errorMsg.password = "Your password must have at least 6 characters";
             return false;
           }
 
@@ -151,11 +187,11 @@
           return true;
 
         },
+
         registerSubmit(){
-            this.sanitization();
-            //validation
-            //ajaxCall
-            //savingToken -> redirectToHome
+            if(this.sanitization() && this.passwordConfirm()){
+              this.registerSuccess();
+            }
 
         }
       }

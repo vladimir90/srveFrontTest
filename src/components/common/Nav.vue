@@ -13,8 +13,8 @@
               Profile
             </p>
             <ul class="menu-list">
-              <li><router-link :to="'/home/profile'">Profile settings</router-link></li>
-              <li><router-link :to="'/'">Log out</router-link></li>
+              <li><router-link :to="'/home/profile'">{{userData.email}} Profile settings</router-link></li>
+              <li><a @click="logOut">Log out</a></li>
 
             </ul>
 
@@ -24,8 +24,24 @@
 </template>
 
 <script>
+
+
+
+    import {auth} from '../../auth/index.js';
+
   export default {
 
+    data(){
+        return {
+          userData: this.$store.getters.getUserData
+        }
+    },
+    methods:{
+            logOut(){
+                auth.logout();
+
+            }
+      }
   }
 </script>
 

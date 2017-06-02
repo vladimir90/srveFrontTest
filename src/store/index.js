@@ -15,15 +15,15 @@ import * as mutations from './mutations';
 export const store = new Vuex.Store({
 
   state:{
-    jsonData:{},
+    jsonData:[],
+    userData:[]
   },
-
   getters,
   mutations,
-  actions,
-  modules:{
-    usersData
-  }
+  actions
+  // modules:{
+  //   usersData
+  // }
 
 });
 
