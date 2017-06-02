@@ -48,11 +48,11 @@
                 <input class="input" type="password" placeholder="Confirm password" v-model="userData.passwordConf">
               </p>
             </div>
-
+            <hr>
             <div class="field is-grouped">
 
               <p class="control">
-                <a href="/home" class="button is-primary" @click.prevent="registerSubmit">Register</a>
+                <a href="/home" class="button" @click.prevent="registerSubmit">Register</a>
               </p>
             </div>
 
@@ -130,7 +130,7 @@
         },
         registerSuccess(){
           this.ajaxCall('https://jsonplaceholder.typicode.com/posts');
-          router.push({ path: 'home' });
+          router.push({ path: 'register_info' });
           this.$store.dispatch('updateUserData',this.userData);
         },
         sanitization(){

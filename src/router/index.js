@@ -5,6 +5,7 @@ import Router from 'vue-router'
 
 import Login from '@/components/auth/Login'
 import Register from '@/components/auth/Register'
+import RegisterInfo from '@/components/auth/RegisterInfo'
 import Home from '@/components/private/Home'
 import Dashboard from '@/components/common/Dashboard'
 import Profile from '@/components/common/Profile'
@@ -27,6 +28,11 @@ export default new Router({
       path: '/register',
       name: 'AuthRegister',
       component: Register
+    },
+    {
+      path:'/register_info',
+      name:'RegisterInfo',
+      component: RegisterInfo
     },
     {
         path: '/home',
