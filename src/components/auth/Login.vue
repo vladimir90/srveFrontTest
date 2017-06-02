@@ -22,10 +22,10 @@
             <p class="help is-danger">{{errorMsg.password}}</p>
             <p class="help is-success">{{successMsg.password}}</p>
           </div>
-
+          <hr>
           <div class="field is-grouped">
             <p class="control">
-              <button class="button is-primary" @click.prevent="loginSubmit">Login</button>
+              <button class="button" @click.prevent="loginSubmit">Login</button>
               <a href="/register" class="button">Register</a>
             </p>
           </div>
@@ -108,6 +108,20 @@ export default {
             return true;
 
         },
+        validation(){
+//          this.ajaxCall(URLlink,userData);
+
+          if(this.userData.email !== 'vladimir.greksa@gmail.com'){
+              this.successMsg.email = '';
+              this.errorMsg.email = "User doesn't exist, please provide registration first";
+              return false;
+          }
+          this.successMsg.email = "Email correct";
+          this.success = true;
+          return true;
+
+          //if user exist return message user exist return false
+        },
         loginSuccess(){
           this.ajaxCall('https://jsonplaceholder.typicode.com/posts');
           //4.savingToken
@@ -136,7 +150,8 @@ export default {
             });
         },
         loginSubmit(){
-            if(this.sanitization()){
+
+            if(this.sanitization() && this.validation() && this.success){
               this.loginSuccess();
             }
         }
