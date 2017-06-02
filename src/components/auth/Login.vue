@@ -120,7 +120,7 @@ export default {
             }
 
           };
-          
+
           var _this = this;
 
           axios.get(url,this.config)
