@@ -83,7 +83,7 @@ export default {
 
             if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.userData.email)){
                   this.successMsg.email = "Email is correct";
-            } else{
+            } else {
                   this.errorMsg.email = 'You have entered wrong email address';
                   return false;
             }
