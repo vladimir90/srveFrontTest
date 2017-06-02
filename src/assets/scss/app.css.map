@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACA,OAAQ;EACN,UAAU,EAAE,GAAG;;ACDjB,aAAc;EACb,MAAM,EAAC,wBAAuB",
-"sources": ["../components/_footer.scss","../components/_login.scss"],
-"names": [],
-"file": "app.css"
-}
