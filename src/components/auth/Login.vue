@@ -1,5 +1,5 @@
 <template>
-  <div class="container is-fluid">
+  <div class="loginWrapper container is-fluid">
     <div class="columns is-mobile">
       <div class="column column is-half is-offset-one-quarter">
 
