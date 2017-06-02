@@ -1,7 +1,7 @@
 <template>
-  <section class="hero">
+  <section class="header">
     <div class="hero-body">
-      <div class="container has-text-centered">
+      <div class="container ">
         <h1 class="title">
           Serve Food
         </h1>

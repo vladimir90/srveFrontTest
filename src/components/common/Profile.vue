@@ -1,7 +1,7 @@
 <template>
 
   <div class="column">
-    <h1>Profile</h1>
+    <h1 class="title">Profile</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi consectetur
       consequuntur cupiditate, dolorum eum fugiat fugit ipsam ipsum
       libero maxime minus nam, numquam obcaecati officia, quaerat quasi quidem quod.</p>

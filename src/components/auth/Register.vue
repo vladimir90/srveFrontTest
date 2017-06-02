@@ -2,7 +2,7 @@
   <template>
     <div class="container is-fluid">
       <div class="columns is-mobile">
-        <div class="column column is-half is-offset-one-quarter">
+        <div class="column column is-one-quarter is-offset-1">
 
           <form action="">
 
@@ -59,6 +59,7 @@
 
           </form>
         </div>
+        <descriptionView></descriptionView>
       </div>
     </div>
   </template>
@@ -66,9 +67,12 @@
   <script>
     import router from '../../router/index.js';
     import axios from 'axios';
-
+    import descriptionView from '../description.vue';
 
     export default {
+        components:{
+            descriptionView
+        },
       data(){
         return{
           success:false,

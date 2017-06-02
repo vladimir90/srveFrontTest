@@ -27,8 +27,8 @@
 
 
 
-    import {auth} from '../../auth/index.js';
 
+//    import {auth} from '../../auth/index.js';
   export default {
 
     data(){

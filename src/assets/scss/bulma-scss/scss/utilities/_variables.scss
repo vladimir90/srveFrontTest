@@ -4,6 +4,7 @@
 
 // Colors
 
+
 $black: hsl(0, 0%, 4%) !default;
 $black-bis: hsl(0, 0%, 7%) !default;
 $black-ter: hsl(0, 0%, 14%) !default;
@@ -54,10 +55,10 @@ $speed: 86ms !default;
 ////////////////////////////////////////////////
 // 2. Primary colors
 
-$primary: $turquoise !default;
+$primary: $color1 !default;
 
 $info: $blue !default;
-$success: $green !default;
+$success: $color2 !default;
 $warning: $yellow !default;
 $danger: $red !default;
 
