@@ -1,9 +1,9 @@
 <template>
 
 
-  <footer class="footer">
+  <div class="footer">
     <div class="container">
-      <div class="content has-text-centered">
+      <div class="has-text-centered">
         <p>
           <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
           <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
@@ -16,7 +16,7 @@
         </p>
       </div>
     </div>
-  </footer>
+  </div>
 
 
 </template>

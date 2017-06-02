@@ -1,7 +1,7 @@
 <template>
   <div class="loginWrapper container is-fluid">
     <div class="columns is-mobile">
-      <div class="column column is-half is-offset-one-quarter">
+      <div class="column column is-one-quarter is-offset-1">
 
         <form action="">
 
@@ -26,8 +26,6 @@
           <div class="field is-grouped">
             <p class="control">
               <button class="button is-primary" @click.prevent="loginSubmit">Login</button>
-            </p>
-            <p class="control">
               <a href="/register" class="button">Register</a>
             </p>
           </div>
@@ -35,6 +33,7 @@
 
         </form>
       </div>
+        <descriptionView></descriptionView>
     </div>
   </div>
 </template>
@@ -43,8 +42,12 @@
 import axios from 'axios';
 import router from '../../router/index.js';
 import {auth} from '../../auth/index.js';
+import descriptionView from '../description.vue';
 
 export default {
+    components:{
+      descriptionView
+    },
     data(){
       return{
             success:false,
