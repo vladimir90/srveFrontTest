@@ -10,6 +10,9 @@ import Dashboard from '@/components/common/Dashboard'
 import Profile from '@/components/common/Profile'
 import Customers from '@/components/common/Customers'
 
+
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -27,21 +30,17 @@ export default new Router({
     },
     {
         path: '/home',
-        name: 'Private',
         component: Home, children:[
         {
           path: '',
-          name: 'PrivateDashboard',
           component: Dashboard
         },
         {
           path: 'customers',
-          name: 'PrivateCustomers',
           component: Customers
         },
         {
           path: 'profile',
-          name: 'PrivateProfile',
           component: Profile
         }
       ]

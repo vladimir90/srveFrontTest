@@ -40,6 +40,9 @@
 </template>
 
 <script>
+import axios from 'axios';
+import router from '../../router/index.js';
+import {auth} from '../../auth/index.js';
 
 export default {
     data(){
@@ -102,11 +105,35 @@ export default {
             return true;
 
         },
+        loginSuccess(){
+          this.ajaxCall('https://jsonplaceholder.typicode.com/posts');
+          //4.savingToken
+          auth.login('puRUYl7Ic2L-Rhc:;u%FP+{:_9)1:L95Yy@R1];p|§wN0kA[e+D:bhfC%°]sodsE','user');
+          this.$store.dispatch('updateUserData',this.userData);
+        },
+        ajaxCall(url){
+          this.config = {
+            headers: {
+  //            'Authorization': auth.getHeader('id_token'),
+              'Access-Control-Allow-Origin':'*',
+              'Accept': 'application/json'
+            }
+
+          }
+          var _this = this;
+
+          axios.get(url,this.config)
+            .then(function (response) {
+                _this.$store.dispatch('updateJsonData',response.data);
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        },
         loginSubmit(){
             if(this.sanitization()){
-              //validation
-              //ajaxCall
-              //savingToken -> redirectToHome
+              this.loginSuccess();
             }
         }
     }

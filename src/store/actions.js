@@ -6,3 +6,8 @@ export const updateJsonData = ({commit},payload)=>{
   commit('setJsonData',payload);
 }
 
+
+
+export const updateUserData = ({commit},payload)=>{
+  commit('setUserData',payload);
+}

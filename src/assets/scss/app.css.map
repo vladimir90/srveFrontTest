@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,OAAO;EACL,UAAU,EAAC,IAAI",
+"sources": ["../components/_footer.scss"],
 "names": [],
 "file": "app.css"
 }

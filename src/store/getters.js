@@ -4,3 +4,7 @@
 export const getJsonData = state =>{
   return state.jsonData;
 }
+
+export const getUserData = state=>{
+  return state.userData;
+}
