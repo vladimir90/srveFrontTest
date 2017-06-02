@@ -1,13 +1,12 @@
 // to compile scss run npm run watch-css //
 
-//@import "../../node_modules/bulma/css/bulma.css";
-@import "global/variables";
-@import "global/initial-variables";
 
 
 //components
-@import "../components/header";
-@import "../components/footer";
-@import "../components/login";
+@import "components/header";
+@import "components/footer";
+@import "components/login";
+@import "bulma-scss/bulma.scss";
+
 
 
