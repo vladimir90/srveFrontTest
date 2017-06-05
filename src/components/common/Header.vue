@@ -1,15 +1,18 @@
 <template>
   <section class="header">
-    <div class="hero-body">
-      <div class="container ">
-        <h1 class="title">
-          Serve Food
-        </h1>
-        <h2 class="subtitle">
-          Eat with pleasure
-        </h2>
+    <!--<div class="hero-body">-->
+      <div class="container-fluid">
+        <div class="column is-offset-1">
+          <h1 class="title">
+            Serve Food
+          </h1>
+          <h2 class="subtitle">
+            Eat with pleasure
+          </h2>
+        </div>
+
       </div>
-    </div>
+    <!--</div>-->
     <hr>
   </section>
 

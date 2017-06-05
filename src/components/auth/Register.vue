@@ -4,7 +4,7 @@
       <div class="columns is-mobile">
         <div class="column column is-one-quarter is-offset-1">
 
-          <form action="">
+          <form action="" >
 
             <div class="field">
               <label class="label">Firstname:</label>
