@@ -2,15 +2,31 @@
 
   <div class="column">
     <h1 class="title">Profile</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi consectetur
-      consequuntur cupiditate, dolorum eum fugiat fugit ipsam ipsum
-      libero maxime minus nam, numquam obcaecati officia, quaerat quasi quidem quod.</p>
+    <p>{{fullname}}</p>
   </div>
 
 </template>
 
 <script>
+  export default {
 
+      data(){
+        return {
+          userData: this.$store.getters.getUserData,
+        }
+      },
+      methods:{
+          fullname(){
+              let firstname = this.userData[0].firstname;
+              let lastname = this.userData[0].lastname;
+              return firstname + " " + lastname;
+
+          }
+      }
+
+
+
+  }
 
 </script>
 

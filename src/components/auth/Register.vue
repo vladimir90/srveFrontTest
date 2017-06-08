@@ -77,11 +77,11 @@
         return{
           success:false,
           userData:{
-            firstname:'',
-            lastname:'',
-            email:'',
-            password:'',
-            passwordConf:''
+            firstname:'misa',
+            lastname:'tumbaz',
+            email:'misa.tumbaz@gmail.com',
+            password:'ludak123',
+            passwordConf:'ludak123'
           },
           errorMsg:{
             firstname:'',
@@ -130,9 +130,11 @@
         },
         registerSuccess(){
           this.ajaxCall('https://jsonplaceholder.typicode.com/posts');
+          this.success = true;
           router.push({ path: 'register_info' });
           this.$store.dispatch('updateUserData',this.userData);
         },
+
         sanitization(){
 
           for (const key of Object.keys(this.errorMsg)) {

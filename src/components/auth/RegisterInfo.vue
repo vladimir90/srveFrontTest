@@ -12,9 +12,10 @@
 
             <p class="control">
               <span class="select">
-                <select>
-                  <option>Select Country</option>
-                  <option>With options</option>
+                <select v-model="userData.country">
+                   <option disabled value="">Please select one</option>
+                  <option v-for="country in countries">{{country}}</option>
+
                 </select>
 
               </span>
@@ -27,11 +28,11 @@
            <div class="field">
             <p class="control">
               <label class="radio">
-                <input type="radio" name="question">
+                <input type="radio" name="question" v-model="gender" value="Male">
                 Male
               </label>
               <label class="radio">
-                <input type="radio" name="question">
+                <input type="radio" name="question" v-model="gender" value="Female">
                 Female
               </label>
             </p>
@@ -60,6 +61,7 @@
   import router from '../../router/index.js';
   import axios from 'axios';
   import descriptionView from '../description.vue';
+  import {auth} from '../../auth/index.js';
 
   export default {
     components:{
@@ -67,6 +69,8 @@
     },
     data(){
       return{
+        countries:['Belgrade','Budapest','Wien'],
+        gender:'Male',
         success:false,
         userData:{
           country:'',
@@ -78,6 +82,11 @@
 
 
     methods: {
+
+        //we want to login just after registration
+      loginAfterRegistration(){
+        auth.login('puRUYl7Ic2L-Rhc:;u%FP+{:_9)1:L95Yy@R1];p|§wN0kA[e+D:bhfC%°]sodsE','user');
+      },
       passwordConfirm(){
         if (this.userData.password !== this.userData.passwordConf) {
           this.errorMsg.password = "Confirm your password";
@@ -106,11 +115,24 @@
             console.log(error);
           });
       },
+      beforeRouteEnter (to, from, next) {
+        if(this.success){
+          next();
+        }else{
+          next(false);
+        }
+        // called before the route that renders this component is confirmed.
+        // does NOT have access to `this` component instance,
+        // because it has not been created yet when this guard is called!
+      },
       registerSuccess(){
         this.ajaxCall('https://jsonplaceholder.typicode.com/posts');
         this.success = true;
         router.push({path: 'home'});
         this.$store.dispatch('updateUserData', this.userData);
+
+
+        this.loginAfterRegistration();
       },
       registerSubmit(){
         this.registerSuccess();

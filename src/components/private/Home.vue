@@ -15,13 +15,21 @@
 
 <script>
   import navView from '../common/Nav.vue';
-
+  import {auth} from '../../auth/index.js';
 
   export default {
     components:{
       navView
     },
-    template:'<navView>'
+    template:'<navView>',
+    //Check if user Auth then allow access
+    beforeRouteEnter(to,from,next){
+      if(auth.checkAuth('id_token')){
+        next();
+      }else{
+        next("*");
+      }
+    }
 
   }
 </script>

@@ -6,5 +6,5 @@ export const setJsonData = (state,payload)=>{
 }
 
 export const setUserData = (state,payload)=>{
-  state.userData = payload;
+  state.userData.push(payload);
 }
